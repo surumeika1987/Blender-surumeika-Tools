@@ -1,9 +1,9 @@
 import bpy
 
-class TOOLS_OT_CleanupUnusingWeights(bpy.types.Operator):
-    bl_idname = "object.tools_cleanup_unusing_weights"
-    bl_label = "Remove Unuse Weights"
-    bl_description = "Remove Unusing Weights"
+class TOOLS_OT_CleanupUnusedWeights(bpy.types.Operator):
+    bl_idname = "object.tools_cleanup_unused_weights"
+    bl_label = "Remove Unused Weights"
+    bl_description = "Remove Unused Weights"
     bl_options = {"REGISTER", "UNDO"}
 
     def survey(self, obj):

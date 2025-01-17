@@ -14,25 +14,25 @@ bl_info = {
 
 if "bpy" in locals():
     import imp
-    imp.reload(cleanup_unsing_weights)
-    imp.reload(remove_unusing_bones)
+    imp.reload(cleanup_unused_weights)
+    imp.reload(remove_unused_bones)
 else:
-    from . import cleanup_unsing_weights
-    from . import remove_unusing_bones
+    from . import cleanup_unused_weights
+    from . import remove_unused_bones
 
 import bpy
     
 def menu_fn1(self, context):
     self.layout.separator()
-    self.layout.operator(remove_unusing_bones.TOOLS_OT_RemoveUnuseBones.bl_idname)
+    self.layout.operator(remove_unused_bones.TOOLS_OT_RemoveUnusedBones.bl_idname)
 
 def menu_fn2(self, context):
     self.layout.separator()
-    self.layout.operator(cleanup_unsing_weights.TOOLS_OT_CleanupUnusingWeights.bl_idname)
+    self.layout.operator(cleanup_unused_weights.TOOLS_OT_CleanupUnusedWeights.bl_idname)
 
 classes = [
-    remove_unusing_bones.TOOLS_OT_RemoveUnuseBones,
-    cleanup_unsing_weights.TOOLS_OT_CleanupUnusingWeights,
+    remove_unused_bones.TOOLS_OT_RemoveUnusedBones,
+    cleanup_unused_weights.TOOLS_OT_CleanupUnusedWeights,
 ]
 
 def register():

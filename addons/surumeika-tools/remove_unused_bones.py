@@ -1,9 +1,9 @@
 import bpy
 
-class TOOLS_OT_RemoveUnuseBones(bpy.types.Operator):
-    bl_idname = "object.tools_remove_unuse_bones"
-    bl_label = "Remove Unuse Bones"
-    bl_description = "Remove Unusing Bones"
+class TOOLS_OT_RemoveUnusedBones(bpy.types.Operator):
+    bl_idname = "object.tools_remove_unused_bones"
+    bl_label = "Remove Unused Bones"
+    bl_description = "Remove Unused Bones"
     bl_options = {"REGISTER", "UNDO"}
 
     def get_children_bones_name(self, bone: bpy.types.Object):
